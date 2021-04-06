@@ -49,9 +49,10 @@ section p{
 
 footer{
   background-color: rgb(51, 50, 50) ;
-  height: 70px;
+  height: 80px;
   color: white;
   border-top: 5px solid wheat;
+ 
 }
 
 footer p{
