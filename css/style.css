@@ -45,12 +45,17 @@ section p{
   padding: 0 0 15px 10px ;
 }
 
+section ul{
+  list-style: disc;
+  padding: 0 0 0px 30px;
+}
+
 #top10 ol{
   list-style: decimal;
   padding: 0 0 0px 30px;
 }
 
-#top10 li{
+section li{
   padding-bottom: 10px;
 }
 
