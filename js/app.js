@@ -77,20 +77,30 @@ let list = ['purple','black'];
 
 for(let j=0; j<6; j++){
 
-  let color = prompt("Can you quess one of my favourite colors?");
+  let color = prompt("Can you guess one of my favourite colors?");
   color = color.toLowerCase();
 
-  if(color === list[0] || color === list[1]){
+  let correct = false;
 
-    alert("Correct");
-    score++;
+  for(let k=0; k<list.length; k++){
+
+    if(color === list[k]){
+
+      alert("Correct");
+      score++;
+      correct = true;
+      break;
+    }
+  }
+
+  if(correct){
     break;
   }else{
-    alert("Wrong, try again");
-  }
+    alert("Wrong");
+  }  
 }
 
-alert("Good try, these are my favourite colors ( "+ list[0] + " & "+ list[1] + " )")
+alert("Good try, these are my favourite colors ( "+ list[0] + " & "+ list[1] + " )");
 
 /************************* final message ************************/
 
