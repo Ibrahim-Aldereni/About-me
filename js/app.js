@@ -7,9 +7,9 @@ alert("Welcome " + UserName + " to \"About me\" website, I hope you enjoy it");
 
 /************************* the questions ************************/
 
-// question #1 :
-
 let score = 0;
+
+// questions #1-5 :
 
 function answer(a,yesAns,noAns){
 
@@ -24,13 +24,13 @@ function answer(a,yesAns,noAns){
 
   if(q === 'y' || q === 'yes'){
 
-    // console.log(yesA);
+    // console.log(yesAns);
     alert(yesAns);
     score++;
 
   }else if(q === 'n' || q === 'no'){
 
-    // console.log(noA);
+    // console.log(noAns);
     alert(noAns);
   }
   
@@ -42,13 +42,35 @@ answer("Do you think I love reading?","That's right","You wrong I love reading")
 answer("Do you think I have previous job experience?","That's right","You wrong I have");
 answer("Do you think I have GPA higher than 80% in high school?","That's right","You wrong, my GPA > 80%");
 
-alert("your score is "+ score);
+// question #6 :
 
+for(let i=0; i<4; i++){
 
-// // question #6 :
+  let Age = prompt("What's my age?");
+  Age = parseInt(Age);
 
-// // question #7 :
+  if(Age > 27){
+    // console.log("Too High, try again");
+    alert("Too High, Try again");
 
-// /************************* final message ************************/
+  }else if(Age < 27){
+    // console.log("Too Low, try again");
+    alert("Too Low, Try again");
+  }else if(Age === 27){
+    // console.log("Bullseye, That's correct");
+    alert("Bullseye, That's correct");
+    score++;
+  }else{
+    // console.log("Wrong entry!!");
+    alert("Wrong entry!!");
+  }
+}
 
+alert("Nice try, in case you failed to guess my age is 27");
+
+// question #7 :
+
+/************************* final message ************************/
+
+// alert("your score is "+ score);
 // alert("Good job " + UserName + " take a tour in the site to know me better")
