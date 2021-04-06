@@ -1,56 +1,54 @@
-// 'use strict';
+'use strict';
 
-// /* get user name and welcome message  */
+/***************** get user name and welcome message *******************/
 
-// let UserName = prompt("Provide your name please?");
-// alert("Welcome " + UserName + " to \"About me\" website, I hope you enjoy it ");
+let UserName = prompt("Provide your name please?");
+alert("Welcome " + UserName + " to \"About me\" website, I hope you enjoy it");
 
-// /* the questions*/
+/************************* the questions ************************/
 
-// function answer(q){
-//   switch(q){
-//     case 'y':
-//     case 'yes':
-//     case 'yeah':
-//       // console.log("Correct answer"); 
-//       alert("Correct answer");
-//       break;
-      
-//     case 'no':
-//     case 'n':
-//     case 'nope':
-//       // console.log("Incorrect answer"); 
-//       alert("Incorrect answer");
-//       break;
+// question #1 :
 
-//     default:
-//       // console.log("Wrong entry");
-//       alert("Wrong entry, you should enter y/n");
-//       break;
-//   }
-// }
+let score = 0;
 
-// let q1 = prompt("Do you think I am an engineer?",'y/n  or  yes/no  or  yeah/nope');
-// q1 = q1.toLowerCase();
-// answer(q1);
+function answer(a,yesAns,noAns){
 
-// let q2 = prompt("Do you think I am nerd?",'y/n  or  yes/no  or  yeah/nope');
-// q2 = q2.toLowerCase();
-// answer(q2);
+  let q = prompt(a,'y/n  or  yes/no');
+  q = q.toLowerCase();
 
-// let q3 = prompt("Do you think I love reading?",'y/n  or  yes/no  or  yeah/nope');
-// q3 = q3.toLowerCase();
-// answer(q3);
+  while(!q || (q !== 'y' && q !== 'yes' && q !== 'n' && q !== 'no')){
 
-// let q4 = prompt("Do you think I have previous job experience?",'y/n  or  yes/no  or  yeah/nope');
-// q4 = q4.toLowerCase();
-// answer(q4);
+    q = prompt("Please enter y/n or yes/no, Again " + a);
+    q = q.toLowerCase();
+  }
 
-// let q5 = prompt("Do you think I have GPA higher than 80% in high school?",'y/n  or  yes/no  or  yeah/nope');
-// q5 = q5.toLowerCase();
-// answer(q5);
+  if(q === 'y' || q === 'yes'){
+
+    // console.log(yesA);
+    alert(yesAns);
+    score++;
+
+  }else if(q === 'n' || q === 'no'){
+
+    // console.log(noA);
+    alert(noAns);
+  }
+  
+}
+
+answer("do you think I am an engineer?","That's right","You wrong I am an engineer");
+answer("Do you think I am nerd?","That's right","You wrong I am nerd");
+answer("Do you think I love reading?","That's right","You wrong I love reading");
+answer("Do you think I have previous job experience?","That's right","You wrong I have");
+answer("Do you think I have GPA higher than 80% in high school?","That's right","You wrong, my GPA > 80%");
+
+alert("your score is "+ score);
 
 
-// /* final message*/
+// // question #6 :
+
+// // question #7 :
+
+// /************************* final message ************************/
 
 // alert("Good job " + UserName + " take a tour in the site to know me better")
