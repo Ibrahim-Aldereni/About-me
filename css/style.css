@@ -31,6 +31,7 @@ section{
   padding: 10px ;
   color: white;
   line-height: 25px;
+  font-size: 18px;
 }
 
 section h2{
@@ -42,7 +43,15 @@ section h2{
 
 section p{
   padding: 0 0 15px 10px ;
-  font-size: 18px;
+}
+
+#top10 ol{
+  list-style: decimal;
+  padding: 0 0 0px 30px;
+}
+
+#top10 li{
+  padding-bottom: 10px;
 }
 
 /************footer***************/
