@@ -3,7 +3,7 @@
 /***************** get user name and welcome message *******************/
 
 let UserName = prompt("Provide your name please?");
-alert("Welcome " + UserName + " to \"About me\" website, I hope you enjoy it");
+alert("Welcome ( " + UserName + " ) to \"About me\" website, I hope you enjoy it");
 
 /************************* the questions ************************/
 
@@ -56,10 +56,13 @@ for(let i=0; i<4; i++){
   }else if(Age < 27){
     // console.log("Too Low, try again");
     alert("Too Low, Try again");
+
   }else if(Age === 27){
     // console.log("Bullseye, That's correct");
     alert("Bullseye, That's correct");
     score++;
+    break;
+
   }else{
     // console.log("Wrong entry!!");
     alert("Wrong entry!!");
@@ -70,7 +73,27 @@ alert("Nice try, in case you failed to guess my age is 27");
 
 // question #7 :
 
+let list = ['purple','black'];
+
+for(let j=0; j<6; j++){
+
+  let color = prompt("Can you quess one of my favourite colors?");
+  color = color.toLowerCase();
+
+  if(color === list[0] || color === list[1]){
+
+    alert("Correct");
+    score++;
+    break;
+  }else{
+    alert("Wrong, try again");
+  }
+}
+
+alert("Good try, these are my favourite colors ( "+ list[0] + " & "+ list[1] + " )")
+
 /************************* final message ************************/
 
-// alert("your score is "+ score);
-// alert("Good job " + UserName + " take a tour in the site to know me better")
+// console.log("Your score is "+ score);
+alert("Your score is "+ score);
+alert("Good job ( " + UserName + " ) take a tour in the site to know me better")
