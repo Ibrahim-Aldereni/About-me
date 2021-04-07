@@ -118,6 +118,14 @@ function question7(){
 question7();
 /************************* final message ************************/
 
-// console.log("Your score is "+ score);
-alert("Your score is "+ score);
-alert("Good job ( " + UserName + " ) take a tour in the site to know me better")
+
+
+//declaring feedback function
+
+function feedBack(){
+  // console.log("Your score is "+ score);
+  alert("Your score is "+ score);
+  alert("Good job ( " + UserName + " ) take a tour in the site to know me better");
+}
+//calling feedback function
+feedBack();
