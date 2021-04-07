@@ -79,36 +79,43 @@ question6();
 
 
 // question #7 :
+// declaring question7 function
+let color;
+let list;
+let correct;
+function question7(){
+    list = ['purple','black'];
 
-let list = ['purple','black'];
+    for(let j=0; j<6; j++){
 
-for(let j=0; j<6; j++){
+    color = prompt("Can you guess one of my favourite colors?");
+      color = color.toLowerCase();
 
-  let color = prompt("Can you guess one of my favourite colors?");
-  color = color.toLowerCase();
+      correct = false;
 
-  let correct = false;
+      for(let k=0; k<list.length; k++){
 
-  for(let k=0; k<list.length; k++){
+        if(color === list[k]){
 
-    if(color === list[k]){
+          alert("Correct");
+          score++;
+          correct = true;
+          break;
+        }
+      }
 
-      alert("Correct");
-      score++;
-      correct = true;
-      break;
-    }
+      if(correct){
+        break;
+      }else{
+        alert("Wrong");
+      }  
   }
 
-  if(correct){
-    break;
-  }else{
-    alert("Wrong");
-  }  
+  alert("Good try, these are my favourite colors ( "+ list[0] + " & "+ list[1] + " )");
 }
 
-alert("Good try, these are my favourite colors ( "+ list[0] + " & "+ list[1] + " )");
-
+//calling the question7 function
+question7();
 /************************* final message ************************/
 
 // console.log("Your score is "+ score);
