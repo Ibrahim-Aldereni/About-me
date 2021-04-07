@@ -43,33 +43,40 @@ answer("Do you think I have previous job experience?","That's right","You wrong 
 answer("Do you think I have GPA higher than 80% in high school?","That's right","You wrong, my GPA > 80%");
 
 // question #6 :
+// declaring Q6
+let Age;
 
-for(let i=0; i<4; i++){
+function question6(){
 
-  let Age = prompt("What's my age?");
-  Age = parseInt(Age);
+  for(let i=0; i<4; i++){
 
-  if(Age > 27){
-    // console.log("Too High, try again");
-    alert("Too High, Try again");
+    Age = prompt("What's my age?");
+    Age = parseInt(Age);
 
-  }else if(Age < 27){
-    // console.log("Too Low, try again");
-    alert("Too Low, Try again");
+    if(Age > 27){
+      // console.log("Too High, try again");
+      alert("Too High, Try again");
 
-  }else if(Age === 27){
-    // console.log("Bullseye, That's correct");
-    alert("Bullseye, That's correct");
-    score++;
-    break;
+    }else if(Age < 27){
+      // console.log("Too Low, try again");
+      alert("Too Low, Try again");
 
-  }else{
-    // console.log("Wrong entry!!");
-    alert("Wrong entry!!");
+    }else if(Age === 27){
+      // console.log("Bullseye, That's correct");
+      alert("Bullseye, That's correct");
+      score++;
+      break;
+
+    }else{
+      // console.log("Wrong entry!!");
+      alert("Wrong entry!!");
+    }
   }
+  alert("Nice try, in case you failed to guess my age is 27");
 }
+// calling the question6 function
+question6();
 
-alert("Nice try, in case you failed to guess my age is 27");
 
 // question #7 :
 
