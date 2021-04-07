@@ -43,67 +43,89 @@ answer("Do you think I have previous job experience?","That's right","You wrong 
 answer("Do you think I have GPA higher than 80% in high school?","That's right","You wrong, my GPA > 80%");
 
 // question #6 :
+// declaring Q6
+let Age;
 
-for(let i=0; i<4; i++){
+function question6(){
 
-  let Age = prompt("What's my age?");
-  Age = parseInt(Age);
+  for(let i=0; i<4; i++){
 
-  if(Age > 27){
-    // console.log("Too High, try again");
-    alert("Too High, Try again");
+    Age = prompt("What's my age?");
+    Age = parseInt(Age);
 
-  }else if(Age < 27){
-    // console.log("Too Low, try again");
-    alert("Too Low, Try again");
+    if(Age > 27){
+      // console.log("Too High, try again");
+      alert("Too High, Try again");
 
-  }else if(Age === 27){
-    // console.log("Bullseye, That's correct");
-    alert("Bullseye, That's correct");
-    score++;
-    break;
+    }else if(Age < 27){
+      // console.log("Too Low, try again");
+      alert("Too Low, Try again");
 
-  }else{
-    // console.log("Wrong entry!!");
-    alert("Wrong entry!!");
-  }
-}
-
-alert("Nice try, in case you failed to guess my age is 27");
-
-// question #7 :
-
-let list = ['purple','black'];
-
-for(let j=0; j<6; j++){
-
-  let color = prompt("Can you guess one of my favourite colors?");
-  color = color.toLowerCase();
-
-  let correct = false;
-
-  for(let k=0; k<list.length; k++){
-
-    if(color === list[k]){
-
-      alert("Correct");
+    }else if(Age === 27){
+      // console.log("Bullseye, That's correct");
+      alert("Bullseye, That's correct");
       score++;
-      correct = true;
       break;
+
+    }else{
+      // console.log("Wrong entry!!");
+      alert("Wrong entry!!");
     }
   }
+  alert("Nice try, in case you failed to guess my age is 27");
+}
+// calling the question6 function
+question6();
 
-  if(correct){
-    break;
-  }else{
-    alert("Wrong");
-  }  
+
+// question #7 :
+// declaring question7 function
+let color;
+let list;
+let correct;
+function question7(){
+    list = ['purple','black'];
+
+    for(let j=0; j<6; j++){
+
+    color = prompt("Can you guess one of my favourite colors?");
+      color = color.toLowerCase();
+
+      correct = false;
+
+      for(let k=0; k<list.length; k++){
+
+        if(color === list[k]){
+
+          alert("Correct");
+          score++;
+          correct = true;
+          break;
+        }
+      }
+
+      if(correct){
+        break;
+      }else{
+        alert("Wrong");
+      }  
+  }
+
+  alert("Good try, these are my favourite colors ( "+ list[0] + " & "+ list[1] + " )");
 }
 
-alert("Good try, these are my favourite colors ( "+ list[0] + " & "+ list[1] + " )");
-
+//calling the question7 function
+question7();
 /************************* final message ************************/
 
-// console.log("Your score is "+ score);
-alert("Your score is "+ score);
-alert("Good job ( " + UserName + " ) take a tour in the site to know me better")
+
+
+//declaring feedback function
+
+function feedBack(){
+  // console.log("Your score is "+ score);
+  alert("Your score is "+ score);
+  alert("Good job ( " + UserName + " ) take a tour in the site to know me better");
+}
+//calling feedback function
+feedBack();
