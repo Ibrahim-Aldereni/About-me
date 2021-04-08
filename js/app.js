@@ -24,13 +24,11 @@ function answer(a,yesAns,noAns){
 
   if(q === 'y' || q === 'yes'){
 
-    // console.log(yesAns);
     alert(yesAns);
     score++;
 
   }else if(q === 'n' || q === 'no'){
 
-    // console.log(noAns);
     alert(noAns);
   }
   
@@ -43,6 +41,7 @@ answer("Do you think I have previous job experience?","That's right","You wrong 
 answer("Do you think I have GPA higher than 80% in high school?","That's right","You wrong, my GPA > 80%");
 
 // question #6 :
+
 // declaring Q6
 let Age;
 
@@ -54,21 +53,21 @@ function question6(){
     Age = parseInt(Age);
 
     if(Age > 27){
-      // console.log("Too High, try again");
+      
       alert("Too High, Try again");
 
     }else if(Age < 27){
-      // console.log("Too Low, try again");
+     
       alert("Too Low, Try again");
 
     }else if(Age === 27){
-      // console.log("Bullseye, That's correct");
+      
       alert("Bullseye, That's correct");
       score++;
       break;
 
     }else{
-      // console.log("Wrong entry!!");
+     
       alert("Wrong entry!!");
     }
   }
@@ -79,6 +78,7 @@ question6();
 
 
 // question #7 :
+
 // declaring question7 function
 let color;
 let list;
@@ -116,14 +116,13 @@ function question7(){
 
 //calling the question7 function
 question7();
+
 /************************* final message ************************/
-
-
 
 //declaring feedback function
 
 function feedBack(){
-  // console.log("Your score is "+ score);
+  
   alert("Your score is "+ score);
   alert("Good job ( " + UserName + " ) take a tour in the site to know me better");
 }
